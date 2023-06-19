@@ -1,38 +1,212 @@
-.App {
+/* Header */
+
+.header{
+  /* background-color: #c3c0c099; */
+}
+.navbartheme {
+  display: flex;
+  background-color: #fff !important;
+  width: 100% !important;
+}
+.header_logo{
+  width: 2rem;
+}
+
+.home_main, .home_online_start{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background:
+   linear-gradient(to right,rgba(48, 70, 207, 0), rgba(242, 45,85, 0)),
+   url('../public/assets/image/images.jpeg');
+   background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+}
+.home_main{
+  position: relative;
+
+}
+.main_content, .outer_circle, .middle_circle, .inner_circle, .home_card_text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_down_arrow_container{
+  position: absolute;
+  bottom: -3.2rem;
+}
+
+.outer_circle, .inner_circle{
+  width: 6rem;
+  height: 6rem;
+  border: 1px solid white;
+  border-radius: 50%;
+  /* text-align: center; */
+}
+.inner_circle{
+  width: 4rem;
+  height: 4rem;
+}
+.main_down_arrow{
+  background-color: #fff;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.5rem;
+  color: pink;
+}
+.home_card_container{
+  
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.categories_course_section{
+  max-width: 1600px;
+  margin: 4rem auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.home_card{
+  width: 22%;
+  margin: 1rem 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* overlay */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.overlay {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  /* background: cyan; */
+  /* display: inline-block; */
+}
+
+.home_card_img {
+  vertical-align: middle;
+}
+
+.overlay::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: blue;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.overlay:hover::before {
+  opacity: 0.5;
+}
+
+.home_card:hover{
+  top: -10px;
+}
+
+
+/* Top course text overlay */
+
+.img_wrap {
+  position: relative;
+  
+}
+
+.img_preview {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(9, 132, 209, 0.909);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+
+.img_wrap:hover .img_preview {
+  visibility: visible;
+  opacity: 2;
+}
+
+.home_online_start, .home_store_section{
+  background:
+   linear-gradient(to right,rgba(132, 104, 222, 0.76), rgba(132, 104, 222, 0.765)),
+   url('../public/assets/image/images.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.home_client{
+  background-color:rgba(181, 178, 178, 0.182);
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+
+}
+.client_img_container{
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+.home_store_mobile img{
+  width: 15rem;
+  height: 20rem;
+}
+.home_store_section{
+  /* padding: 10rem 0; */
+}
+.home_store_content{
+  display: flex;
+  justify-content: space-evenly;
+  /* align-items: center; */
+  flex-wrap: wrap;
+}
+.home_store_button{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem;
+}
+.newsletter_section{
+ background-color: #b2acac2e;
+ margin: 2rem 0;
+}
+.team_train{
+  background-color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.team_train, .newsletter_section_container{
+  max-width: 1600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem 0;
+}
+.client_logo_container{
+  display: flex;
+}
+.client_logo{
+  background-color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.client_log{
+  width: 17%;
+}
+
+
+@media screen and (mix-width: 600px) {
+  .html {
+   font-size: 12px;
   }
 }
