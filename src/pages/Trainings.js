@@ -58,111 +58,53 @@ const Trainings = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-            setShow(true);
-            // handleRegister();
+        setShow(true);
+        // handleRegister();
     }
 
     return (
-        <div className="page-content">
-            <div className="container-fluid ps-md-0">
-                <div className="full-width about-sec ">
-                    <div className="training_section">
-                        <div className="container">
-                            {show ?
-                            <div>
-                                <Form>
-                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                        <Form.Label>Scan to pay <span>*</span></Form.Label>
-                                        <div> <img src={qrcode} className='img-thumbnail' alt='...' /></div>
-                                    </Form.Group>
-                                </Form>
-                            </div>
-                                :
-                                <div className='text_grid'>
-                                    {/* <Stack container spacing={2}>
-                                        <Stack xs={12} item >
-                                            <TextField
-                                                id="standered-basic"
-                                                label="Name"
-                                                placeholder='Enter fullName'
-                                                color="warning"
-                                                fullWidth
-                                                value={form.fullName}
-                                                error={!!form.errors?.fullName}
-                                                helperText={form.errors?.fullName}
-                                                onChange={(e) => setForm({ ...form, fullName: e.target.value })}
-                                            />
-                                        </Stack>
-                                        <Stack xs={12} item>
-                                            <TextField
-                                                id="standered-basic"
-                                                label="Phone number"
-                                                type="number"
-                                                placeholder='Enter Phone number'
-                                                color="warning"
-                                                fullWidth
-                                                required
-                                                value={form.mobile}
-                                                error={!!form.errors?.mobile}
-                                                helperText={form.errors?.mobile}
-                                                onChange={(e) => setForm({ ...form, mobile: e.target.value })}
-                                            />
-                                        </Stack>
-                                        <Stack xs={12} item>
-                                            <TextField
-                                                id="standered-basic"
-                                                label="Email"
-                                                type="email"
-                                                placeholder='Enter email'
-                                                color="warning"
-                                                fullWidth
-                                                required
-                                                value={form.email}
-                                                error={!!form.errors?.email}
-                                                helperText={form.errors?.email}
-                                                onChange={(e) => setForm({ ...form, email: e.target.value })}
-                                            />
-                                        </Stack>
-                                        <Stack xs={12} item>
-                                            <Button variant='contained' color='primary' fullWidth
-                                            // onClick={handleSubmit}
-                                            >Register now</Button>
-                                        </Stack>
-                                    </Stack> */}
-                                    <Form>
-                                    <Form.Group className="mb-3" controlId="formGroupPassword">
-                                            <Form.Label>Full name</Form.Label>
-                                            <Form.Control type="text" placeholder="Enter your full name"
-                                                onChange={(e) => setForm({ ...form, fullName: e.target.value })}
-
-                                            />
-                                        </Form.Group>
-                                        <Form.Group className="mb-3" controlId="formGroupEmail">
-                                            <Form.Label>Email address</Form.Label>
-                                            <Form.Control type="email" placeholder="Enter email" 
-                                                onChange={(e) => setForm({ ...form, email: e.target.value })}
-                                            />
-                                        </Form.Group>
-                                        <Form.Group className="mb-3" controlId="formGroupPassword">
-                                            <Form.Label>Mobile Number</Form.Label>
-                                            <Form.Control type="number" placeholder="Mobile number" 
-                                                onChange={(e) => setForm({ ...form, mobile: e.target.value })}
-                                            />
-                                        </Form.Group>
-                                        <Button onClick={handleSubmit}>Pay NOW</Button>
-                                    </Form>
-                                </div>
-                            }
+        <>
+            <div className="training_section">
+                <div className="container">
+                    {show ?
+                        <div>
+                            <Form>
+                                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                    <Form.Label>Scan to pay <span>*</span></Form.Label>
+                                    <div> <img src={qrcode} className='img-thumbnail' alt='...' /></div>
+                                </Form.Group>
+                            </Form>
                         </div>
-                    {/* </Card.Text>
-                </Card.Body>
-            </Card>
-        </Col> */}
-                        {/* </Row > */}
-                    </div >
-                </div >
+                        :
+                        <div className='text_grid'>
+                            <h3>Registration</h3>
+                            <Form>
+                                <Form.Group className="mb-3" controlId="formGroupPassword">
+                                    <Form.Label>Full name</Form.Label>
+                                    <Form.Control type="text" placeholder="Enter your full name" required
+                                        onChange={(e) => setForm({ ...form, fullName: e.target.value })}
+
+                                    />
+                                </Form.Group>
+                                <Form.Group className="mb-3" controlId="formGroupEmail" required>
+                                    <Form.Label>Email address</Form.Label>
+                                    <Form.Control type="email" placeholder="Enter email"
+                                        onChange={(e) => setForm({ ...form, email: e.target.value })}
+                                    />
+                                </Form.Group>
+                                <Form.Group className="mb-3" controlId="formGroupPassword">
+                                    <Form.Label>Mobile Number</Form.Label>
+                                    <Form.Control type="number" placeholder="Mobile number" required
+                                        onChange={(e) => setForm({ ...form, mobile: e.target.value })}
+                                    />
+                                </Form.Group>
+                                <Button onClick={handleSubmit}>Pay NOW</Button>
+                            </Form>
+                        </div>
+                    }
+                </div>
             </div >
-        </div >
+        </>
     );
 };
 

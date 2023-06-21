@@ -1,5 +1,8 @@
 /* Header */
 
+li{
+  list-style: none;
+}
 .header{
   /* background-color: #c3c0c099; */
 }
@@ -296,6 +299,10 @@
   justify-content: space-between;
   align-items: start;
 }
+.user_info_share Button{
+ display: inline-block;
+
+}
 .star_filled{
   color: rgba(255, 255, 0, 0.626);
 }
@@ -319,6 +326,7 @@
   background-color: rgb(255, 16, 83);
 }
 .buynow_button{
+  margin: 0.3rem 0;
   border-radius: 1rem;
   padding: 0.3rem;
   color: #fff;
@@ -328,13 +336,50 @@
   margin-right: 2rem;
 }
 .embed_youtube_video{
-  width: 825px;
-  height: 540px;
+  width: 100%;
+  height: 580px;
   border-radius: 0.5rem;
 }
 .dropdown{
   display: inline-block;
   width: 100%;
+}
+.cs_overview_section{
+  margin: 2rem 0;
+}
+
+.cs_overview, .about_ins_container, .instructor_pricing_widget, .feature_course_widget, .blog_tag_widget{
+  border: 0.1rem solid rgba(0, 0, 0, 0.099);
+  padding: 1rem;
+}
+
+.aside_section{
+  flex-basis: 23%;
+}
+.feature_course_widget{
+  margin: 2rem 0;
+}
+.buy-access{
+  margin: 0.3rem 0;
+}
+.price_quere_list span{
+  font-size: 1rem;
+  color: rgb(119, 119, 235) ;
+}
+
+.training_section{
+  border-radius: 0.5rem;
+  padding: 2rem;
+  background-color: #6b696944;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+.tag-item{
+  display: inline-block;
+  margin: 0.2rem;
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.5rem;
+  background-color: #8583835e;
 }
 @media screen and (max-width: 986px) {
   .html {
@@ -349,6 +394,16 @@
   }
   .home_store_mobile img{
     display: none;
+  }
+  .content_container, .related_card_container{
+    /* max-width: 960px; */
+    margin: 1rem;
+    flex-direction: column;
+    /* justify-content:space-between; */
+  }
+  .training_section{
+    max-width: 960px;
+    /* margin: 2rem auto; */
   }
 }
 
@@ -365,6 +420,17 @@
   }
   .home_store_mobile img{
     display: none;
+  }
+  .content_container, .related_card_container{
+    max-width: 700px;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content:space-between; */
+  }
+  .training_section{
+    max-width: 700px;
+    /* margin: 2rem auto; */
   }
 }
 
@@ -403,5 +469,40 @@
     width: 95%;
     margin:0.2rem;
   }
+  .content_container, .related_card_container{
+    max-width: 590px;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
 
+  .user_info{
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .user_img_name{
+    display: flex;
+    justify-content: flex-start;
+  }
+  .related_card_container{
+    flex-direction: column;
+  }
+  .related_course_section h2{
+    text-align: center;
+  }
+  .related_course{
+    flex-basis: 100%;
+    margin: 1rem 0;
+  }
+  .training_section{
+    max-width: 590px;
+    width: 100%;
+    padding: 2rem 0;
+  }
+  .training_section Button{
+    width: 100%;
+  }
+  .user_info_share{
+    font-size: 12px;
+  }
 }

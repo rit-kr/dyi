@@ -7,9 +7,6 @@ import { HiOutlineKey } from 'react-icons/hi';
 import { DiResponsive } from 'react-icons/di';
 import { IoIosFlash } from 'react-icons/io';
 import { GrCertificate } from 'react-icons/gr';
-
-
-
 import { BiCommentDetail } from 'react-icons/bi';
 import Accordion from 'react-bootstrap/Accordion';
 import { Nav } from 'react-bootstrap';
@@ -30,8 +27,10 @@ export default function WebDesign() {
                     <section className='content_section'>
                         <div className='user_info_share'>
                             <div className='user_info'>
+                                <div className='user_img_name'>
                                 <img className='client_img_container' src="../assets/image/demo-logo.png" alt='Logo' />
                                 <p>Ali Tufan</p>
+                                </div>
                                 <p>Last updated 21 December 2019</p>
                             </div>
                             <Button><AiOutlineShareAlt />Share</Button>
@@ -52,7 +51,7 @@ export default function WebDesign() {
                                 src="https://www.youtube.com/embed/UdDwKI4DcGw" title="Learn Remotely Today with Edumy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
                             </iframe>
                         </div>
-                        <div>
+                        <div class="cs_overview_section">
                             <div class="cs_overview">
                                 <h4 class="title">Course Overview</h4>
                                 <h4 class="subtitle">Course Description</h4>
@@ -108,10 +107,11 @@ export default function WebDesign() {
                                 </ul>
                             </div>
                         </div>
-                        <div>
+                        {/* <div> */}
+                        <div className='cs_overview'>
                             <div>
-                                <h3>Course ContentStart</h3>
-                                <p>Date: 22/12/19 Category: Design</p>
+                                <h3>Course Content</h3>
+                                <p>Start Date: 22/12/19 Category: Design</p>
                             </div>
                             <div className='accordion_container'>
                                 <Accordion defaultActiveKey={['0']} alwaysOpen>
@@ -142,6 +142,9 @@ export default function WebDesign() {
                                 </Accordion>
                             </div>
                         </div>
+                        {/* </div> */}
+                        <div className='cs_overview_section'>
+
                         <div class="about_ins_container" id="yui_3_17_2_1_1687248359619_71">
                             <h4 class="aii_title">About the instructor</h4>
                             <div class="about_ins_info">
@@ -180,6 +183,7 @@ export default function WebDesign() {
                                     <li><a href="#">5. Worldwide</a></li>
                                 </ul>
                             </div>
+                        </div>
                         </div>
                         <section className='related_course_section'>
                             <h2>Related Courses</h2>
@@ -259,17 +263,16 @@ export default function WebDesign() {
                         </section>
                     </section>
                     <section className='aside_section'>
-                        <div>
-                            <div class="instructor_pricing_widget">
-                                <div class="price">
+                        <div className="instructor_pricing_widget_section">
+                            <div className="instructor_pricing_widget">
+                                <div className="price">
                                     <span>Price</span> $49.99 <small>USD</small>
                                 </div>
                                 <Nav className='buynow_button'>
                                     <Nav.Link href="trainings">Buy &amp; Enrol Now</Nav.Link>
                                 </Nav>
-                                {/* <a href="http://demo.createdbycocoon.com/moodle/edumy/1/enrol/index.php?id=4" class="cart_btnss">Buy &amp; Enrol Now</a> */}
-                                <div class="ccn-buy-access">Paid course entry</div>
-                                <ul class="price_quere_list text-left">
+                                <div className="buy-access">Paid course entry</div>
+                                <ul className="price_quere_list">
                                     <li><div class="ccn-course-details-item"><span class="flaticon-play-button-1"><FiPlay /></span> 11 hours on-demand video</div></li>
                                     <li><div class="ccn-course-details-item"><span class="flaticon-download"><LuFileDown /></span> 69 downloadable resources</div></li>
                                     <li><div class="ccn-course-details-item"><span class="flaticon-key-1"><HiOutlineKey /></span> Full lifetime access</div></li>
@@ -305,16 +308,16 @@ export default function WebDesign() {
                         <div class="blog_tag_widget" id="yui_3_17_2_1_1687248359619_69">
                             <h4 class="title" id="yui_3_17_2_1_1687248359619_68">Tags</h4>
                             <ul class="tag_list">
-                                <li class="list-inline-item">
+                                <li class="tag-item">
                                     Beginner
                                 </li>
-                                <li class="list-inline-item">
+                                <li class="tag-item">
                                     Marketing
                                 </li>
-                                <li class="list-inline-item">
+                                <li class="tag-item">
                                     Photoshop
                                 </li>
-                                <li class="list-inline-item">
+                                <li class="tag-item">
                                     Sketch
                                 </li>
                             </ul>

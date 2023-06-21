@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import {AiOutlineUser, AiOutlineSearch} from 'react-icons/ai';
+import { AiOutlineUser, AiOutlineSearch } from 'react-icons/ai';
 
 function Header() {
   return (
@@ -11,12 +11,12 @@ function Header() {
 
         <Navbar variant="light" bg="light" expand="lg">
           <Container fluid>
-            <Navbar.Brand href="#home">
+            <Navbar.Brand href="/">
               <img className='header_logo' src="../assets/image/demo-logo.png" alt='Logo' />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbar-light-example" />
             <Navbar.Collapse id="navbar-light-example">
-              <Nav>
+              {/* <Nav>
                 <NavDropdown
                   id="nav-dropdown-light-example"
                   title="HOME"
@@ -32,7 +32,7 @@ function Header() {
                     Separated link
                   </NavDropdown.Item>
                 </NavDropdown>
-              </Nav>
+              </Nav> */}
               <Nav>
                 <NavDropdown
                   id="nav-dropdown-light-example"
@@ -50,7 +50,7 @@ function Header() {
                   </NavDropdown.Item>
                 </NavDropdown>
               </Nav>
-              <Nav>
+              {/* <Nav>
                 <NavDropdown
                   id="nav-dropdown-light-example"
                   title="EVENTS"
@@ -106,7 +106,7 @@ function Header() {
                 <Nav.Link href="#"><AiOutlineUser /></Nav.Link>
                 <Nav.Link href="#login">Login/Register</Nav.Link>
                 <Nav.Link href="#"><AiOutlineSearch /></Nav.Link>
-              </Nav>
+              </Nav> */}
             </Navbar.Collapse>
           </Container>
         </Navbar>

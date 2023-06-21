@@ -1,4 +1,6 @@
 import Button from 'react-bootstrap/Button';
+import Nav from 'react-bootstrap/Nav';
+
 import { BsArrowDownCircleFill } from 'react-icons/bs';
 import Card from 'react-bootstrap/Card';
 import { AiOutlineUser, AiFillApple, AiOutlineArrowDown, AiFillStar } from 'react-icons/ai';
@@ -107,30 +109,37 @@ export default function Home() {
                     <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
                 </div>
                 <div className='home_card_container'>
-                    <Card className='top_course'>
-                        <div className='img_wrap'>
-                            <Card.Img className='top_course_img' variant="top" src="../assets/image/images.jpeg" />
-                            <div class="img_preview">
-                                <p className='top_seller_tag'>Top seller</p>
-                                <p className='img_preview_tag'>Preview Courses</p>
-                            </div>
-                        </div>
-                        <Card.Body>
-                            {/* <Card.Title>Introduction web development & HTML</Card.Title> */}
-                            <Card.Text>
-                                <small className="text-muted">28/06/2023</small>
-                                <p>
-                                    Introduction web development & HTML
-                                </p>
-                                <div className='star_filled'><AiFillStar /> <AiFillStar /><AiFillStar /><AiFillStar /><AiFillStar /> </div>
+                    <Nav>
 
-                            </Card.Text>
-                        </Card.Body>
-                        <Card.Footer>
-                            <small className="text-muted"><AiOutlineUser /> <span>2 </span></small>
-                            <small className="text-muted"><BiCommentDetail /> <span>2  </span></small>
-                        </Card.Footer>
-                    </Card>
+                    <Nav.Item>
+                        <Nav.Link href="/webDesign">
+                            <Card className='top_course'>
+                                <div className='img_wrap'>
+                                    <Card.Img className='top_course_img' variant="top" src="../assets/image/images.jpeg" />
+                                    <div class="img_preview">
+                                        <p className='top_seller_tag'>Top seller</p>
+                                        <p className='img_preview_tag'>Preview Courses</p>
+                                    </div>
+                                </div>
+                                <Card.Body>
+                                    {/* <Card.Title>Introduction web development & HTML</Card.Title> */}
+                                    <Card.Text>
+                                        <small className="text-muted">28/06/2023</small>
+                                        <p>
+                                            Introduction web development & HTML
+                                        </p>
+                                        <div className='star_filled'><AiFillStar /> <AiFillStar /><AiFillStar /><AiFillStar /><AiFillStar /> </div>
+
+                                    </Card.Text>
+                                </Card.Body>
+                                <Card.Footer>
+                                    <small className="text-muted"><AiOutlineUser /> <span>2 </span></small>
+                                    <small className="text-muted"><BiCommentDetail /> <span>2  </span></small>
+                                </Card.Footer>
+                            </Card>
+                        </Nav.Link>
+                    </Nav.Item>
+                    </Nav>
                     <Card className='top_course'>
                         <div className='img_wrap'>
                             <Card.Img className='top_course_img' variant="top" src="../assets/image/images.jpeg" />
@@ -428,7 +437,7 @@ export default function Home() {
 
                 </div>
             </section>
-            
+
         </>
     );
 };
